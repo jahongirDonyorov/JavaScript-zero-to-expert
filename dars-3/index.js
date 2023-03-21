@@ -133,3 +133,4 @@ console.log(null ?? 1) // 1 - null false deb 1 ni qaraydi bir true va 1 ni chiqa
 
 console.log(undefined || 1) // 1
 console.log(undefined ?? 1) // undefined false db hisoblab 1 ni chiqaradi
+//
