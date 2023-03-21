@@ -97,6 +97,16 @@
 
 //  console.log(a)
 
+//====== Exponentiation **,
+console.log(2 * 2) // 2ni 2-darajasi = 4
+console.log(2 * 2 * 2) // 2ni 3-darajasi = 8
+console.log(2 * 2 * 2 * 2) // 2ni 4-darajasi = 16
+/*  bu holada 2 ni darajalarini chiqaryapmiz lekn 2 ning 60 - datajasi kerak 
+2 ni 60 martta uziga kupaytirish kerak buladi buu juda kup code bulib ketadi*/
+//  **  bu esa c darajani chiqarish uchun kerak masalan 2 ni 60-darajasi
+
+console.log(2 ** 60)// 2 ni uzini uziga 60 martta kupaytiradi
+
 // Comparision  - Taqqoslash
 //  <, >, ==, ===, <=, >=, ! Malumotlarni compare qilish doim true yoke false qiymat qaytaradi
 // let a = 10;
@@ -117,11 +127,14 @@
 // console.log(b === c); // false  chunke c string b number
 // stringlar uzaro solishtirilyotganda hariflarning tartib qaramiga qaraladi ascee table dan kursa buladi
 
-// ===== || OR
+// ===== || OR - yoke
 console.log(true || true); // true
 console.log(false || true); // true
 console.log(false || false); // false
 // bunda bitta true bulsaham true chiqaradi
+
+console.log(3 || 2); // ikkalasiham true birinchiga qaraydi true bulsa birinchini chiqaradi false bulsa bir ikkiga qaraydi ikki true bulsa ikkinchini chiqaradi
+
 
 let ceo = false;
 let admin = true;
@@ -160,7 +173,6 @@ let check = true;
 console.log(check); // true
 console.log(!check); // false teskarisini chiqarib beradi
 
-//========================  if elseconsol
 let t = 2,
   c = 1;
 
