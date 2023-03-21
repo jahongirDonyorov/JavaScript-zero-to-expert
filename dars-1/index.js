@@ -95,3 +95,4 @@ function test() {
   console.log(arr[2]) // bular function ga tegishli buladi qachonke function ishlasagina console.log ni chiqaradi
 } 
 test() // function shunday chaqiriladi indi function ishlaydi
+//
