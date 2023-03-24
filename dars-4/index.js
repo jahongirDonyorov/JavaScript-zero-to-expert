@@ -8,7 +8,9 @@
 // switch -> ===
 
 let virebal = "issiq";
-switch ( virebal) { // (...) lerable 
+switch (
+  virebal // (...) lerable
+) {
   case "sovuq": // case ... - tepadagi virebal === bulsa case ... ga
     console.log("bugun sovuq"); // bu chiqsin
     break; // agar tepadagi ishlasa bu code ni tuxtatadi pasga utmaydi break bulmasa pastagi javoblarniham chiqarib tashlaydi
@@ -16,31 +18,32 @@ switch ( virebal) { // (...) lerable
     console.log("bugun issiq");
     break;
   default: // agar hammasi notug'ri bulasa shu javob chiqadi huddi else ni uzidek
-    console.log("error"); 
+    console.log("error");
 }
 // (data) case - holat --- dataning holati case ... bulsa  : console.log(...) ni chiqar deyapdi
 
 //============================= For Loops - Basics
 
 // masalan 1 dan 6 gacha son chiqarmoqchi bulsak bittalab yozish kerak buladi
-console.log('1')
-console.log('2')
-console.log('3')
-console.log('4')
-console.log('5')
-console.log('6')
+// console.log("1");
+// console.log("2");
+// console.log("3");
+// console.log("4");
+// console.log("5");
+// console.log("6");
 
-// ===== For loops da esa buni bitta console.log() ni uzida qilsa buladi 
+// ===== For loops da esa buni bitta console.log() ni uzida qilsa buladi
 
 //-------- for(start, finish, step){code} - bu bizga narsalarni aylantirib beradi
 
 //     1       2        3       4
- for(i = 1; i <= 6; i = i + 1) {  // i++ qilsakham ham buladi bu faqat bittadan quwadi hozirgi holatda esa 2,3,4 tadan ham quwiwimiz mumkun
-  console.log(i)// local uzgaruvchi i ni chiqarib beradi
-  console.log('salom')// salom suziham 6 marotaba takrorlanadi
+for (i = 1; i <= 6; i = i + 1) {
+  // i++ qilsakham ham buladi bu faqat bittadan quwadi hozirgi holatda esa 2,3,4 tadan ham quwiwimiz mumkun
+  console.log(i); // local uzgaruvchi i ni chiqarib beradi
+  console.log("salom"); // salom suziham 6 marotaba takrorlanadi
   // i++ 3. ni buyirgaham yozib quysak buladi
   // 4. {} ni ichidagi code tuliq yurib bulgandan sung 3. i++ ishlaydi
- }
+}
 // 1. local uzgaruvchisini yaratib unga qiymat beryapdi
 // 2. usha qiymatni solishtiryapdi
 // 3. solishtirilgan qiymatga yitguncha 1 tadan quwib borilsin deyilyapdi buni 2,3,4 tadan ham qilsak buladi, I++ qilsak faqat bittadan quwadi
@@ -52,14 +55,14 @@ console.log('6')
 
 // - qiymat berib ayirib ketsak ham buladi
 
-// let vs var 
+// let vs var
 //   1
-// for(var i = 1; i <= 6; i++){// 1 local uzgaruzchi 
+// for(var i = 1; i <= 6; i++){// 1 local uzgaruzchi
 
 // }
 // console.log(i)// var flobal bulganligi uchun buyirda chaqirolamiz
 // // letni chaqirsak hato bulardi let local bulsa faqat local ishlaydi var esa hamma joyda ishlayveradi
- 
+
 //=====!!!!!!! Continue usha sonni chiqarmasdan utkazib yuboradi
 //=====!!!!!!! Break usha songacha chiqarib beradi faqat
 
@@ -80,19 +83,48 @@ console.log('6')
 // }
 
 //============ Toq Juft sonlarni chiqarish
-for(i = 1; i <= 14; i++){
+for (i = 1; i <= 14; i++) {
   // console.log(i % 2)// 1,0,1,0 chiqaveradi juft sonlar bulinib 0 buladi toqlar 1
-  if(i%2 === 0)console.log(`Jusft ${i}`)// i%2 = 0 bulgan sonlarni chiqarsin
-  else console.log(`Toq ${i}`) // i%2=0 bulmagan sonlarni chiqaradi Toq sonlarni
+  if (i % 2 === 0)
+    console.log(`Jusft ${i}`); // i%2 = 0 bulgan sonlarni chiqarsin
+  else console.log(`Toq ${i}`); // i%2=0 bulmagan sonlarni chiqaradi Toq sonlarni
 
   // 3 ga 0 (qoldiqsiz) bulinadigan solarni olish
-  if( i % 3 === 0) continue;//continue usha sonlarni chiqarmasdan qolganini chiqarib betadi
-
+  if (i % 3 === 0) continue; //continue usha sonlarni chiqarmasdan qolganini chiqarib betadi
 }
 
 // 3 ga 0 (qoldiqsiz) bulinadigan solarni olish
-for(i = 1; i <= 14; i++){
-  if( i % 3 === 0) continue;//continue usha sonlarni chiqarmasdan qolganini chiqarib betadi
-  if( i % 3 === 0) console.log(i);// bunda 3 ga bulinadiganlarni faqat chiqaradi
- console.log(i)
+for (i = 1; i <= 14; i++) {
+  if (i % 3 === 0) continue; //continue usha sonlarni chiqarmasdan qolganini chiqarib betadi
+  if (i % 3 === 0) console.log(i); // bunda 3 ga bulinadiganlarni faqat chiqaradi
+  console.log(i);
+}
+
+//============= for ichidan for yozish
+// for ichida yana bitta for ishlatsak buladi
+// 1 - for har bir marta yurganida ichidagi code (for) tuliq bir marotaba ishlashi kerak kiyin katta for ikkinchi martta ishga tushadi
+// for(i = 1; i <= 10; i++){ // ishga tushadi ichidagi hamma code ishlagandan kiyin ikkinchi martta ishga tushadi
+//   for(a = 1; a <= 10; a++){//bu tuliq ishlab bulgandan kiyin tepadagi ikkinchi martta ishga tushadi
+//     console.log(i)// hammasi 10 tadan chiqadi
+//     // bu yirda berilgan break katta for i ga tasir qilmaydi . Ikich forni esa kattasi ichida chqirolmaymiz
+//   }
+// }
+
+//============= forLoop label
+outer: for (i = 1; i <= 6; i++) {
+  inner: for (a = 1; a <= 6; a++) {
+    // bungaham lebel bersak buladi ihtiyoj tugilganda
+    // i 4 ga yitganda for(a) bir tuxtab kiyin davom etib ketadi
+    // if(i === 4) break ;// i 4 ga teng bulganda for (a) tuxtaydi yana for (i) chiqib kiyin davom etib ketadi
+    //     i1     i2     i3 da a tuxtab  i 4 da davom etib ketadi
+    // aaa i aaa i aaa i ...          i aaa davom etadi
+
+    // i 4 ga yetganda hammasi i ham polne tuxtaydi
+    if (i === 4) break outer; // i loop nomini yozsak i === 4 ga bulgandan kiyin hammasi tuxtaydi
+    console.log(a, "a");
+  }
+  // !!! ichgi forni tashqaridan turib break qilib bulmaydi loop yordamidaham
+  // tashqaridagini tuxrarsak ichkaridagi automatiske tuxtaydi
+  // if(i <= 2)break
+  console.log(i, "i");
 }
