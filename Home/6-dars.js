@@ -1,10 +1,11 @@
 // #    /////////////////object/////////////////
 // No1
 // object keylarini toping
-// let obj={
-//     id:1,
-//     name:"WebBrain"
-// }
+let obj={
+    id:1,
+    name:"WebBrain"
+}
+console.log(obj)
 // chiqish
 // id,name
 // no2
