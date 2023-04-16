@@ -47,7 +47,7 @@ let accaunt = {
 // bundaham malumot quwibham uchiribham bulmaydi faqat bunda bor malumoti uzgartirsak buladi
 
 // ichidagi qiymatni uzgartirish
-accaunt.age = 19;
+accaunt.age = 19; 
 // tug'ridan tug' uzgartirmochqi bulgan qiymatga yangi qiymatni berib quyamz
 // Agarda u malumot bulmasa yangi malumot key yozgan bulsak yangi qiymat qushin quyadi
 accaunt.founded = 2023; // bunda yangi faunded degan qiymat qushilmoqda
