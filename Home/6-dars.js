@@ -1,19 +1,26 @@
 // #    /////////////////object/////////////////
 // No1
 // object keylarini toping
-let obj={
-    id:1,
-    name:"WebBrain"
-}
-console.log(obj)
+// let obj={
+//     id:1,
+//     name:"WebBrain"
+// }
+// console.log(obj.id + " " + obj.name);
+// console.log(obj)
 // chiqish
 // id,name
 // no2
 // object valuelarining raqamga tenglarini toping
 // let obj={
 //     id:1,
+//     ids:15,
 //     name:"WebBrain"
 // }
+// for (let key in obj) {
+//     if (typeof obj[key] === "number") {
+//       console.log(obj[key]);
+//     }
+//   }
 // chiqish
 // id
 // No3
@@ -25,6 +32,21 @@ console.log(obj)
 //     online:true,
 //     individual:false
 // }
+// 1 - usul
+// for(let key in obj){
+//     if(typeof obj[key] === 'boolean'){
+//         console.log(key+' '+ obj[key])
+//     }
+// }
+// 2- usul
+// let booleanProps = {};
+// for (let key in obj) {
+//   if (typeof obj[key] === "boolean") {
+//     booleanProps[key] = obj[key];
+//   }
+// }
+// console.log(booleanProps);
+
 // chiqish
 // {   offline:true,
 //     online:true,
@@ -39,10 +61,18 @@ console.log(obj)
 //     online:true,
 //     individual:false
 // }
-// function Search(obj,str){}
+// function Search(obj,str){
+//   for (let key in obj) {
+//     if ( obj[key] === str) {
+//       console.log(key + ": " + obj[key]);
+//     }
+//   }
+
+// }
 // Search(obj,'WebBrain')
 // chiqish
 //     name:"WebBrain"
+
 // No5
 // object va string berilgan.  string bor bolgan object valuelarining chiqaring
 // let obj={
@@ -52,24 +82,81 @@ console.log(obj)
 //   count:10,
 //   price:"10$"
 // }
-// searchValue(obj,'i') => atirgul,qizil
+// const searchValue = (obj, str) => {
+//   for(let key in obj){
+//     if(typeof obj[key] === str){
+//       console.log(key)
+//     }
+//   }
+// }
+// searchValue(obj,'string') // => atirgul,qizil
+
 // No6
 // object ichida objectlar berilgan. ichki objectlarning ichiga age degan key berilgan. barcha ichki keylardagi age lar yigindisini toping
-// let person = {
-//     id: 1,
-//     name: 'Odil',
-//     age:78,
-//     child: {
-//         id: 1,
-//         name: 'Ali',
-//         age:48,
-//         child: {
-//             id: 1,
-//             name: 'Umar',
-//             age:20
-//         }
-//     }
+let person = {
+  id: 1,
+  name: "Odil",
+  age: 78,
+  child: {
+    id: 1,
+    name: "Ali",
+    age: 48,
+    child: {
+      id: 1,
+      name: "Umar",
+      age: 20,
+    },
+  },
+};
+let obj = {
+  id: 1,
+  name: "Odil",
+  age: 78,
+  child: {
+    id: 1,
+    name: "Ali",
+    age: 48,
+    child: {
+      id: 1,
+      name: "Umar",
+      age: 20,
+    },
+  },
+};
+let sum = 0;
+//===== shile dagi kurinishi
+while (1) {
+  if (obj) {
+    sum = sum + obj.age
+  } else {
+    break;
+  }
+  obj = obj.child;
+}
+console.log(sum)
+
+//==== for dagi kurinishi
+// for (let i = 1; 1; ) {
+//   if (obj) {
+//     sum = sum +obj.age
+//   } else {
+//     break;
+//   }
+//   obj = obj.child
 // }
+// console.log(sum)
+
+//===== do while dagi kurinishi
+// do{
+//   if(obj){
+//     sum = sum + obj.age
+//   }else{
+//     break
+//   }
+//   obj = obj.child
+// }while(1)
+// console.log(sum)
+
 // chiqish
 // 146
 
