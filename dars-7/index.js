@@ -112,18 +112,18 @@ let id2 = Symbol("id");
 // console.log(obj.id2); // . bn chaqirsa deymanek bulmaganlar key:value bulganlar chiqadi
 // console.log(obj[id2]);
 
-// let obj = {
-//   name: "Jahon",
-//   age: 18,
-//   title: "John",
-//   object:{
-//     objName:'Obj'
-//   },
-//   child: {
-//     childName: "testing name",
-//     childAge: 19,
-//   },
-// };
+let obj = {
+  name: "Jahon",
+  age: 18,
+  title: "John",
+  object: {
+    objName: "Obj",
+  },
+  child: {
+    childName: "testing name",
+    childAge: 19,
+  },
+};
 
 // for (value in obj) {
 //   // bu obj ni ichidagi barcha valuelarni chiqarib beradi
@@ -136,27 +136,35 @@ let id2 = Symbol("id");
 // console.log(obj.age); // keyni chiqarmoqchi bulsak shu holda yozishimiz kerak lekn keyni uzini yozibham chiqarishimiz mumkun
 
 // let name = "hello"; // bu holatda verable yaratolmemiz chunke name verablesi pastda yaratilgan
-// 1                   2                          3
-// const { age, name: newName, title, hh, object, child:{childName,childAge} } = obj; // {} obj ga tenglashtirilyapdi
+// 1                   2                                                           3
+const {
+  age,
+  name: newName,
+  title,
+  hh,
+  object,
+  child: { childName, childAge },
+} = obj; // {} obj ga tenglashtirilyapdi // obj ichidan chiqarib olinyapdi
+
 // name:newName - qilganimizning sababi name dgan uzgaruvchi bor name ni uzini yozib quysak hato buladi shunga unga yangi qiymat beramiz va shu yangi qiymat blan chaqiramiz
 // ichidagi child objni ham destrakchi qilib ketsak buladi
 // distrakchi bulgan malumotni distrakchi qilish uchun ...:{...} yoziladi {} quyilmasa yangi nom berilgan hisoblanadi
 
 // 1 - verable yaratilyapdi
-// 2 - bular obj ning ichidagi huddi shunaqa key bn tenglashadi verable nomi obj key noni blan birhil bulishi kerak
+// 2 - bular obj ning ichidagi huddi shunaqa key bn tenglashadi verable nomi obj key nomi blan birhil bulishi kerak
 // obj niki bn bir xil ketma ketlikda kelishi shart emas muhumi key bn nomi bir hil bulsa buldi
 // buni ichidagi bereblelar ni yana let name = .... db yaratolmaymiz chunke bular uzi yaralgan
 // 3 - object
 
 // endi yuqoridagidey obj.key qilish shart emas keyni uzini yozib quysak ham buladi
-// console.log(age); // 18
+console.log(age); // 18
 // console.log(name); // name chaqirsak hello chiqadi chunke bunaqa verable bor obj ni ichidagini chaqirish uchun yangi qiymatini chaqiramiz
 // console.log(newName); // Jahon -
 // console.log(hh); // undefined - obj da bu qiymat yuqligi uchun
 // console.log(object); // obj ni uzini chiqarib beradi
-// console.log(object.objName); // obj ichidagi keyni chiqaradi
+console.log(object.objName); // obj ichidagi keyni chiqaradi
 // obj ichidagi child objsi ni ham distrak qilib chiqarib olgandan sung . quymasdan chaqirsak buladi
-// console.log(childAge)
+console.log(childAge);
 
 //================== sprite operator
 
@@ -172,13 +180,13 @@ let id2 = Symbol("id");
 
 // console.log(obj)
 
-let obj = {
-  name: "John",
-  age:18,
-};
+// let obj = {
+//   name: "John",
+//   age:18,
+// };
 
-console.log({...obj, name:'It center'})// .. obj ni ichidagilarni chiqarib beradi name new qiymat bn qiymatini yangilab olamiz
-console.log({...obj, newName:'It center'})// .. obj ni ichidagilarni chiqarib beradi neme:..., age:..., kiyin yangi qiymat bulardan kiyin qushiladi
+// console.log({...obj, name:'It center'})// .. obj ni ichidagilarni chiqarib beradi name new qiymat bn qiymatini yangilab olamiz
+// console.log({...obj, newName:'It center'})// .. obj ni ichidagilarni chiqarib beradi neme:..., age:..., kiyin yangi qiymat bulardan kiyin qushiladi
 // console.log(obj); // bunda butun obj chiqadi childni uzini
 
 // obj = { ...obj.child }; // ... nuqta splite operator obj ichidagi narsalarni yoyib chiqarib beradi
