@@ -93,47 +93,47 @@
 
 // No6
 // object ichida objectlar berilgan. ichki objectlarning ichiga age degan key berilgan. barcha ichki keylardagi age lar yigindisini toping
-let person = {
-  id: 1,
-  name: "Odil",
-  age: 78,
-  child: {
-    id: 1,
-    name: "Ali",
-    age: 48,
-    child: {
-      id: 1,
-      name: "Umar",
-      age: 20,
-    },
-  },
-};
-let obj = {
-  id: 1,
-  name: "Odil",
-  age: 78,
-  child: {
-    id: 1,
-    name: "Ali",
-    age: 48,
-    child: {
-      id: 1,
-      name: "Umar",
-      age: 20,
-    },
-  },
-};
-let sum = 0;
-//===== shile dagi kurinishi
-while (1) {
-  if (obj) {
-    sum = sum + obj.age
-  } else {
-    break;
-  }
-  obj = obj.child;
-}
-console.log(sum)
+// let person = {
+//   id: 1,
+//   name: "Odil",
+//   age: 78,
+//   child: {
+//     id: 1,
+//     name: "Ali",
+//     age: 48,
+//     child: {
+//       id: 1,
+//       name: "Umar",
+//       age: 20,
+//     },
+//   },
+// };
+// let obj = {
+//   id: 1,
+//   name: "Odil",
+//   age: 78,
+//   child: {
+//     id: 1,
+//     name: "Ali",
+//     age: 48,
+//     child: {
+//       id: 1,
+//       name: "Umar",
+//       age: 20,
+//     },
+//   },
+// };
+// let sum = 0;
+// //===== shile dagi kurinishi
+// while (1) {
+//   if (obj) {
+//     sum = sum + obj.age;
+//   } else {
+//     break;
+//   }
+//   obj = obj.child;
+// }
+// console.log(sum);
 
 //==== for dagi kurinishi
 // for (let i = 1; 1; ) {
@@ -163,24 +163,39 @@ console.log(sum)
 // No7
 // array berilgan array ning ichida objectlar berilgan. object ichida age berilgan. age ni 18dan katta bolgan objectlarni qaytaring
 // let user = {
-//     id: 1,
-//     name: 'Odil',
-//     age: 78,
-//     children: [
-//         {
-//             id: 1,
-//             name: 'Umar',
-//             age: 54,
-//             children: [
-//                 { id: 1, name: 'Asmo', age: 34 },
-//                 { id: 2, name: 'Osim', age: 30 },
-//                 { id: 3, name: 'Xattob', age: 25 },
-//             ]
-//         },
-//         { id: 2, name: 'Umar', age: 54 },
-//         { id: 3, name: 'Umar', age: 54 },
-//     ]
+//   id: 1,
+//   name: "Odil",
+//   age: 78,
+//   children: [
+//     {
+//       id: 1,
+//       name: "Umar",
+//       age: 54,
+//       children: [
+//         { id: 1, name: "Asmo", age: 34 },
+//         { id: 2, name: "Osim", age: 30 },
+//         { id: 3, name: "Xattob", age: 25 },
+//       ],
+//     },
+//     { id: 2, name: "Umar", age: 54 },
+//     { id: 3, name: "Umar", age: 54 },
+//   ],
+// };
+
+// function getAdults(obj) {
+//   let result = [];
+//   if (obj.age >= 18) {
+//     result.push(obj);
+//   }
+//   if (obj.childred) {
+//     for (let i = 0; i < obj.childred.length; i++) {
+//       result = result.concat(getAdults(abj.children[i]));
+//     }
+//   }
+//   return result;
 // }
+// let adults = getAdults(user);
+// console.log(adults);
 
 // No8
 // array ichida object berilgan. job berilgan objectlarni qaytaring
@@ -191,12 +206,42 @@ console.log(sum)
 //     {id:4,name:'Usmon',job:'developer'},
 //     {id:5,name:'Usmon'}
 // ]
+
+// function getObj(arr){
+//   return arr.filter(obj => obj.job !== undefined)
+// }
+// console.log(getObj(arr))
+
+// chaqirishni ikkinchi usuli
+// let jobs = getObj(arr)
+// console.log(jobs)
+
+// console.log(arr)
+
 // No9
 // objectdan clone oling birinchi objni o'zgartirsa ikkinchisi malumotlari ozgarmasligi kk
-// let obj={
-// id:1,name:'Usmon',job:'developer'
-// }
+let obj={
+id:1,name:'Usmon',job:'developer'
+}
 
+//Uzimning Variantim
+// let objClone = structuredClone(obj)
+// objClone.age = 12
+// console.log(obj,objClone)
+
+// ChatGPT varianti
+// let objClone = Object.assign({}, obj);
+// objClone.age = 12;
+// obj.age2 = 122;
+
+// console.log(obj, objClone);
+
+// 3 - usul
+// let objClone = { ...obj };
+// objClone.age = 12;
+// console.log(obj, objClone); 
+
+// -=-=-=-=-=-=- qoldi shu yirda
 // No10
 // objectga yangi qiymat qo'shuvchi funksiya yozing
 // add(obj,key,value){}
