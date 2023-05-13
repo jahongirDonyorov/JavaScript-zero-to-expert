@@ -244,6 +244,15 @@ id:1,name:'Usmon',job:'developer'
 // -=-=-=-=-=-=- qoldi shu yirda
 // No10
 // objectga yangi qiymat qo'shuvchi funksiya yozing
+function add(obj, key, value) {
+  obj[key] = value;
+}
+
+// Namuna
+let myObj = {};
+add(myObj, 'address', 'Toshkent');
+console.log(myObj); // { address: 'Toshkent' }
+
 // add(obj,key,value){}
 // add(obj,'address','toshkent')
 // No11
