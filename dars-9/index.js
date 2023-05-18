@@ -163,3 +163,10 @@ console.log(str.padEnd(22 ,'.'))// '.','s' nma bulsa ushani quyib beradi
 // bu bizga 1 - 22 ta suz buguncha 2 - '.' ni boshidan quyib beradi
 console.log(str.padStart(22 ,'.'))// '.','s' nma bulsa ushani quyib beradi
 // value: ..............webbrain
+
+
+//-==-==-==-==-==-==-==- slice()
+// bu boshlanish index sidan tugash indexsigacha kesib oladi. - qiymatham qabul qiladi - orqadan boshlab sanab keladi 
+
+let slice = 'hello world'
+console.log(slice.slice(0, 6))// 0 dan 6 gacha bulgan narsalarni chiqarib beradi 
