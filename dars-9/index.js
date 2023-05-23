@@ -170,3 +170,79 @@ console.log(str.padStart(22 ,'.'))// '.','s' nma bulsa ushani quyib beradi
 
 let slice = 'hello world'
 console.log(slice.slice(0, 6))// 0 dan 6 gacha bulgan narsalarni chiqarib beradi 
+
+//-==-==-==-==-==-==-==- eval
+// bu string ichidaham arifmetk amallarni bajarib beradi 
+console.log(eval('2+2')) //  4
+console.log(eval('2+2*8')) //  18
+// console.log(eval('2+2*8s')) //  error
+
+
+//-==-==-==-==-==-==-==- trim()
+// strigda gi bush joylarni uchiradi 
+let str2 = '      John' 
+console.log(str2)//      john - bunda bush joy bor
+console.log(str2.trim()) // john - bunda oldindan tashlangan bush joy yuq bulyapdi
+// bu 2 ta suz orasidagi bush joylarni yuq qilmaydi
+
+//-==-==-==-==-==-==-==- split()
+// bu elementni arry ga aylantirib beradi 
+let arr = 'Hello John How are you'
+// 1 - usul
+console.log(arr.split()) // [ 'Hello John How are you' ] - stringni arry ga aylantirib berdi 
+// 2 - usul 
+console.log(arr.split(''))// () ichiga '' quysak har bir elementni ni string holatda arry ni ichidan yozadi
+// value:
+/* [
+  'H', 'e', 'l', 'l', 'o',
+  ' ', 'J', 'o', 'h', 'n',
+  ' ', 'H', 'o', 'w', ' ',
+  'a', 'r', 'e', ' ', 'y',
+  'o', 'u'
+] */
+
+// 3 - usul 
+console.log(arr.split(' ')) // ' ' - orasini ochib quysak har bir orasi ochilgan suzni arry ni ichida bitta string qilib oladi
+// value : [ 'Hello', 'John', 'How', 'are', 'you' ]
+// ikkinchi qiymatham oladi 2 - qiymat nechta chiqarishi kerakligini belgilaydi
+console.log(arr.split(' ', 2))// faqat 2 ta string qilib chiqaradi
+// value : [ 'Hello', 'John' ]
+
+// 4 - usul 
+console.log(arr.split('o')) // usha harf bor joyni arry ni ichida stringa oladi va harfni uzini olib tashlaydi
+// value :  'Hell', ' J', 'hn H', 'w are y', 'u' ]
+
+//-==-==-==-==-==-==-==- concat() suz quwib beradi 
+console.log(arr.concat(' Hi Alex, I am Fine Thank you, did you arriv work two days ago ?'))
+// bunda arr uzgaruvchisiga hozirgi suzlar qushildi
+// value : Hello John How are you Hi Alex, I am Fine Thank you, did you arriv work two days ago ?
+
+// -==-==-==-==-==-==-==- valueOf 
+// bu contruktur holdachiqadigan stringni faqatgina valuesini chiqarishda ishlatiladi
+ 
+console.log(new String("No, I didn't go work two days ago"))
+// value : [String: "No, I didn't go work two days ago"] - bu contruktor holda chiqyapdi
+console.log(new String("No, I didn't go work two days ago").valueOf())
+// value : No, I didn't go work two days ago - valueni uzini chiqarib berdi
+
+// -==-==-==-==-==-==-==- replace 
+// stringni aynan bizga kerak bulgan qismini uzgartirishda foydalanamiz 
+// 2ta qiymat oladi birinchisi uzgaradigan qiymat ikkinchisi nmaga uzgarishi kerakligi 
+// faqat birinchi kelgan qiymatni uzgartiradi agar usha qiymatdan ikkita bulsa 
+let a = 'I did not go to work that day either'
+// value : I did not go to work that day either
+console.log(a.replace('did not', `didn't`))// bunda did not didn't ga uzgaryapdi
+// value : I didn't go to work that day either
+// console.log(a.replace('Did not', `didn't`)) // Did qilib quydik uzgaruvchmizda katta D bn boshlangan Did yuq shuning uchun ignor beradi error 
+// buni tug'irlash uchun 
+console.log(a.replace(/Did not/i, `didn't`)) // shu shaklda yozamiz /../i i - ignor bu bizga harf katta kichigligi tug'ri kelmasaham suz tug'ri kelsa buldi ignor bulmaydi
+
+console.log(a.replace(/Did not/ig, `didn't`)) // agar /.../ig qilsak usha uzgaruvchini ichidagi hamma ussha berilgan suzlarni uzgartiradi
+
+// -==-==-==-==-==-==-==- Loop 
+// bu har bir harifni bittadan chiqarib beradi 
+for(char of a){ // char urniga hohlagan suzni quysak buladi
+  console.log(char) // bu bizga a ni ichidagi har bir harfni bittadan chiqarb beradi
+}
+
+// bu blan har bir element nmaligini aniqlasak buladi masalalarda
