@@ -111,7 +111,6 @@
 // --=--=--=--=--=--=-- array ni array ga qushish 
 let a = [1,2,3]
 let b = [0,9,8]
-
 console.log(a + b) // 1,2,30,9,8; 3 ni oxirida yoke 0 ni boshida , bulmaganligi  uchun 30 bub qushilib qoldi 
 // bu bizga array sfatida qushmaydi string sfatida qushadi 1 2 3 ga shunday 0 9 8 ni qushadi 
 // tugri quwiw uchun biz Methodelardan foydalanamz 
