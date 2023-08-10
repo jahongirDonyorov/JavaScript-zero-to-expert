@@ -1,10 +1,10 @@
 // Toq va Fusf sonlar
 // Fuft
-// for(i = 1; i <= 10; i++){
-//   // console.log(i%2)
-//   if(i%2 === 0)console.log(i)
-//   // else(i)// qilib quysak i%2 = 0 bulmaganlarni (toqlarni) ciqaradi
-// }
+for(i = 1; i <= 10; i++){
+  // console.log(i%2)
+  if(i%2 === 0)console.log(i)
+  // else(i)// qilib quysak i%2 = 0 bulmaganlarni (toqlarni) ciqaradi
+}
 // // Toq
 // for(i = 1; i <= 10; i++){
 //   // console.log(i%2)
