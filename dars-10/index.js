@@ -4,7 +4,7 @@
 // let ar = [1, 3, 'John', function test(){},null, undefined, true,false ];
 // // arr doim sanoqni 0 dan boshlaydi
 // // element 1 dan sanaydi msalan 1, 0 endexdagi 1 element
-
+ 
 // // =-=-=-=-=- chaqirirsh yullari
 // console.log(ar) // ar ni tuliq chiqarib beradi
 // // bizga ichidagi aynan bitta narsa kerak bulsa uni olish uchun [index number] dan foydalanamiz
